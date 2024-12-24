@@ -27,3 +27,12 @@ class ReLU(ActivationFunction):
 class LeakyReLU(ActivationFunction):
     def forward(self, x):
         return max(0.1 * x, x)
+
+
+class ELU(ActivationFunction):
+    def forward(self, x):
+        if x < 0:
+            return torch.exp(x) - 1
+        else:
+            return x
+
