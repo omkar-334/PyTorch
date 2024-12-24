@@ -36,3 +36,7 @@ class ELU(ActivationFunction):
         else:
             return x
 
+
+class Swish(ActivationFunction):
+    def forward(self, x):
+        return x * torch.sigmoid(x)
