@@ -17,3 +17,8 @@ class Sigmoid(ActivationFunction):
 class Tanh(ActivationFunction):
     def forward(self, x):
         return (torch.exp(x) - torch.exp(-x)) / (torch.exp(x) + torch.exp(-x))
+
+
+class ReLU(ActivationFunction):
+    def forward(self, x):
+        return max(0, x)
