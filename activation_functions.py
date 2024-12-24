@@ -12,3 +12,8 @@ class ActivationFunction(nn.Module):
 class Sigmoid(ActivationFunction):
     def forward(self, x):
         return 1 / (1 + torch.exp(-x))
+
+
+class Tanh(ActivationFunction):
+    def forward(self, x):
+        return (torch.exp(x) - torch.exp(-x)) / (torch.exp(x) + torch.exp(-x))
