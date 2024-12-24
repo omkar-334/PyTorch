@@ -22,3 +22,8 @@ class Tanh(ActivationFunction):
 class ReLU(ActivationFunction):
     def forward(self, x):
         return max(0, x)
+
+
+class LeakyReLU(ActivationFunction):
+    def forward(self, x):
+        return max(0.1 * x, x)
